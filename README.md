@@ -1,163 +1,47 @@
-🧠 1. ESTRUCTURA IDEAL DE PROYECTO (REFERENCIA)
+# 🧠 Estructura del Proyecto y Estado Actual — ProcuraAI
 
-Un proyecto como ProcuraAI debería tener 6 capas:
+---
 
-Problema & objetivo de negocio
-Data pipeline (ingesta + arquitectura)
-EDA & segmentación
-Modelamiento
-Validación & robustez
-Producto / capa comercial
-📊 2. COMPARACIÓN REAL vs IDEAL
-🟣 1. Problema & objetivo
-✔️ Ya tienes
-Problema claro (mercado público no predictivo)
-Enfoque (licitaciones → forecast)
-Propuesta de valor (anticipación)
-⚠️ Falta
-Definir explícitamente:
-usuario objetivo (proveedor, consultora, Estado)
-caso de uso concreto (ej: priorizar ventas)
-🟣 2. Data pipeline
-✔️ Ya tienes
-Descarga API Mercado Público
-Estructura en GDrive (muy bien armada)
-Datos históricos 2020–2026
-Parquet → correcto
-⚠️ Parcial
-Automatización diaria (lo comenzaste)
-No está completamente orquestado
-❌ Falta
-Pipeline formal tipo:
-raw → processed → analytics
-Logging de procesos
-Control de errores robusto
-Versionado de datasets
-🟣 3. EDA & segmentación (FASE 1)
-✔️ Muy fuerte
-Embudo completo
-Segmentación LE pública
-Métricas de ciclicidad
-Clustering
-Ranking estratégico
-⚠️ Falta menor
-Justificación formal (k, umbrales)
-Visualizaciones ejecutivas
+## 🧠 1. ESTRUCTURA IDEAL DE PROYECTO (REFERENCIA)
 
-👉 Esta fase está 80–90% completa
+Un proyecto como ProcuraAI debería estructurarse en 6 capas:
 
-🟣 4. Modelamiento (FASE 2)
-✔️ Ya tienes
-Varios modelos (muy bien)
-Comparación
-Modelo final seleccionado
-Forecast a futuro
-⚠️ Parcial
-Solo un split train/test
-Sin benchmark naive
-Sin intervalos de confianza
-❌ Falta
-Backtesting real (walk-forward)
-Persistencia del modelo
-Pipeline reproducible
+1. Problema & objetivo de negocio  
+2. Data pipeline (ingesta + arquitectura)  
+3. EDA & segmentación  
+4. Modelamiento  
+5. Validación & robustez  
+6. Producto / capa comercial  
 
-👉 Esta fase está 65–75% completa
+---
 
-🟣 5. Validación & robustez
-❌ Aquí está el mayor gap
+## 📊 2. COMPARACIÓN REAL vs IDEAL
 
-Hoy tienes:
+### 🟣 1. Problema & objetivo
 
-métricas (MAE, RMSE, MAPE)
+#### ✔️ Ya implementado
+- Problema claro: mercado público no predictivo  
+- Enfoque definido: licitaciones → forecast  
+- Propuesta de valor: anticipación de oportunidades  
 
-Pero falta:
+#### ⚠️ Pendiente
+- Definir explícitamente:
+  - Usuario objetivo (proveedor, consultora, Estado)
+  - Caso de uso concreto (ej: priorización comercial)
 
-Validación temporal robusta
-Comparación contra baseline
-Análisis de residuos
-Sensibilidad del modelo
-Intervalos de predicción
+---
 
-👉 Esta capa está 40% completa
+### 🟣 2. Data pipeline
 
-🟣 6. Producto / capa comercial (FASE 3)
-✔️ Ya tienes
-Forecast por organismo
-Score comercial
-Ranking
-Identificación de oportunidades
-⚠️ Parcial
-Score no penaliza bien error
-Pocos organismos útiles
-No hay monto económico
-❌ Falta
-Integración con OC (💥 clave)
-Valor económico esperado
-Dashboard o output visual
-Storytelling comercial sólido
+#### ✔️ Ya implementado
+- Descarga desde API Mercado Público  
+- Estructura en Google Drive  
+- Datos históricos 2020–2026  
+- Uso de formato Parquet  
 
-👉 Esta fase está 60% completa
+#### ⚠️ Parcial
+- Automatización diaria iniciada  
+- Orquestación incompleta  
 
-📌 3. DIAGNÓSTICO GENERAL
-Capa	Estado
-Problema	✅ 80%
-Data pipeline	⚠️ 70%
-EDA	✅ 90%
-Modelamiento	⚠️ 70%
-Validación	❌ 40%
-Producto	⚠️ 60%
-🚨 4. LO QUE REALMENTE TE FALTA (CRÍTICO)
-
-Si tuvieras que cerrar el proyecto bien, hay 5 gaps clave:
-
-🔴 1. VALIDACIÓN SERIA (EL MÁS IMPORTANTE)
-
-Hoy tu modelo funciona, pero no está probado bien.
-
-Falta:
-
-walk-forward validation
-benchmark naive
-estabilidad del modelo
-
-👉 Esto es lo que más te pueden cuestionar.
-
-🔴 2. VALOR ECONÓMICO (EL GAME CHANGER)
-
-Hoy predices cantidad de licitaciones, pero no:
-
-👉 💰 cuánto dinero hay ahí
-
-Falta:
-
-cruzar con OC
-estimar ticket promedio
-forecast de monto
-🔴 3. SCORE COMERCIAL ROBUSTO
-
-Hoy el score mezcla:
-
-volumen
-precisión
-
-Pero no penaliza bien el error.
-
-👉 Puedes terminar recomendando malos targets.
-
-🔴 4. ESCALABILIDAD
-
-Hoy:
-
-modelas 20 organismos
-
-Falta:
-
-lógica para escalar a 100+
-o segmentar por tipo de organismo
-🔴 5. CIERRE EJECUTIVO
-
-Falta:
-
-visualizaciones finales
-storytelling claro
-output tipo producto
+#### ❌ Pendiente
+- Pipeline formal:
