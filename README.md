@@ -18,8 +18,8 @@ practica_final_condores/
 ├── scripts/
 │   ├── proyecto_final_condores.ipynb    # Notebook principal con todo el desarrollo del proyecto desde la ingesta de datos hasta las predicciones de la fase III
 │   └── PROYECTO JUPYTER.ipynb           # Notebook de apoyo con cruces de información que servirán en el siguiente MVP
-├──             # Vinculo al dashboard del proyecto
-└── README.md                   # Documentación del proyecto
+├──                # Vinculo al dashboard del proyecto
+└── README.md      # Documentación del proyecto
 ---
 
 ## 🚀 Reproducibilidad
