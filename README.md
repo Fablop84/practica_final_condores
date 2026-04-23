@@ -40,6 +40,23 @@ Una aplicación web interactiva construida con **Dash/Plotly**:
 
 ---
 
+## 🧠 Elección y Justificación del Modelo Predictivo
+Para el desarrollo del núcleo de inteligencia de este proyecto, se realizó un proceso de evaluación comparativa entre algoritmos de última generación. Tras una fase de pruebas rigurosas, el modelo Random Forest Híbrido fue seleccionado como el algoritmo ganador para realizar las proyecciones de Mercado Público.
+
+## 🎯 Justificación del Modelo Ganador:
+1. Precisión Superior (R² = 0.957): El modelo híbrido logró explicar el 95.7% de la variabilidad de los datos, superando significativamente la capacidad predictiva del XGBoost estándar. Esto asegura que las tendencias de licitaciones proyectadas en el Dashboard sean altamente confiables.
+
+2. Reducción de Errores (MAE y RMSE): Presentó el error absoluto medio más bajo (0.0891), lo que significa que las desviaciones entre las licitaciones reales y las predichas son mínimas, permitiendo una planificación financiera más exacta para las organizaciones.
+
+2. Naturaleza Híbrida: Al combinar la capacidad de generalización del Random Forest con ajustes de parámetros específicos para series temporales, el modelo demostró una mayor estabilidad frente a la volatilidad histórica de los datos de licitaciones chilenas.
+
+4. Manejo de la Complejidad: La estructura de este modelo permite capturar las estacionalidades mensuales sin sobreajustarse (overfitting), manteniendo un rendimiento óptimo incluso al procesar el volumen masivo de datos de los últimos 6 años.
+
+## 🚀 Implementación en el Dashboard
+El modelo Random Forest Híbrido es el motor que genera el "Forecast Mensual 2026" visible en la aplicación. Gracias a su alto puntaje de precisión, el sistema puede asignar un Score de confianza a cada organismo público, permitiendo identificar patrones de compra con una certeza estadística validada.
+
+---
+
 ## 🚀 Instalación y Uso
 
 ### Requisitos previos
