@@ -71,6 +71,12 @@ El modelo denominado **"ChileCompraEficiente"** permite:
 **Contribuciones:**
 Este proyecto fue desarrollado bajo una arquitectura modular, permitiendo que el extractor, el modelo y el dashboard funcionen de manera independiente o como un pipeline integrado.
 
-**Autores**: Fabian Camilo López / Jon Abaroa / Luis Manuel Hernandez / Christian Guevara 
-**Fecha**: Abril 2026  
+## 👥 Equipo
+- Fabian Camilo López
+- Jon Abaroa
+- Luis Manuel Hernandez Cancho
+- Christian Guevara
+  
+**Fecha**: Abril 2026
+
 **Bootcamp**: Proyecto final Bootcamp Big Data, Inteligencia Artificial & Machine Learning | Edición XVI.
