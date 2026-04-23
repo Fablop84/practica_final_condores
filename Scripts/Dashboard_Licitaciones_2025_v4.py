@@ -1,8 +1,6 @@
 # =============================================================
 #  DASHBOARD V4 — LICITACIONES  |  Patrones + Modelo Predictivo
 #  Mercado Público Chile · Compra Chile
-#  Datos modelo: df_organizaciones_top.csv (WhatsApp 14/04/2026)
-#  Ejecución: python Dashboard_Licitaciones_2025_v4.py
 #  Luego abre: http://127.0.0.1:8053
 # =============================================================
 
@@ -81,7 +79,7 @@ ORG_NOMBRES_CORTOS = {
 }
 
 # ─────────────────────────────────────────────────────────────
-# CARGA df_organizaciones_top.csv  (fuente: WhatsApp 14/04/2026)
+# CARGA df_organizaciones_top.csv 
 # ─────────────────────────────────────────────────────────────
 print("Cargando df_organizaciones_top...", end=" ", flush=True)
 try:
@@ -110,7 +108,7 @@ except FileNotFoundError:
     sys.exit(1)
 
 # ─────────────────────────────────────────────────────────────
-# DATOS DEL MODELO — HARDCODED (Notebook Iñaki 11/04/2026)
+# DATOS DEL MODELO
 # ─────────────────────────────────────────────────────────────
 
 # 5 modelos comparados
@@ -133,14 +131,14 @@ FORECAST_MKT = pd.DataFrame({
 })
 
 # ─────────────────────────────────────────────────────────────
-# RANKING COMERCIAL — cargado desde df_organizaciones_top.csv
+# RANKING COMERCIAL
 # ─────────────────────────────────────────────────────────────
 RANKING_COM = df_org_top[["codigo_organismo","score_final","mae","rmse","mape",
                            "segmento","segmento_clean","nombre_corto"]].copy()
 RANKING_COM.columns = ["cod","score","mae","rmse","mape","seg","seg_clean","nombre"]
 
 # ─────────────────────────────────────────────────────────────
-# FORECAST 2026 POR ORGANISMO — cargado desde df_organizaciones_top.csv
+# FORECAST 2026 POR ORGANISMO 
 # ─────────────────────────────────────────────────────────────
 FORECAST_ORG = df_org_top[["codigo_organismo","forecast_12m","nombre_corto"]].copy()
 FORECAST_ORG.columns = ["cod","n","nombre"]
