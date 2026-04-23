@@ -11,7 +11,7 @@ Este proyecto, desarrollado por el grupo **Cóndores**, ofrece una solución int
 ---
 
 ## 🛠️ Stack Tecnológico
-* **Lenguajes:** Python 3.x, Scala (Spark).
+* **Lenguajes:** Python 3.11.
 * **Extracción & Cloud:** Requests, Google Cloud Storage, PyArrow (Parquet).
 * **Ciencia de Datos:** Pandas, NumPy, Scikit-learn, Matplotlib, Seaborn.
 * **Visualización:** Plotly, Dash, Dash Bootstrap Components.
